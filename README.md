@@ -1,9 +1,9 @@
-<!doctype html>
+
 <html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>La'Lifes Studios | Premium FiveM Development</title>
+  <title>La'Lifes Studios | ESX / Standalones Script</title>
   <meta name="description" content="Fortschrittliche und performante FiveM Scripts für authentisches Roleplay." />
 
   <style>
