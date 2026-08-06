@@ -1,9 +1,9 @@
-
+<!doctype html>
 <html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>La'Lifes Studios | ESX / Standalones Script</title>
+  <title>La'Lifes Studios | Premium FiveM Development</title>
   <meta name="description" content="Fortschrittliche und performante FiveM Scripts für authentisches Roleplay." />
 
   <style>
@@ -440,7 +440,7 @@
   <footer class="container animate-in delay-3">
     <div>&copy; 2026 La'Lifes Studios. All rights reserved.</div>
     <div>
-      <a href="mailto:pweisenbilder20112@gmail.com">kontakt@lalifes.studio</a>
+      <a href="mailto:kontakt@lalifes.studio">kontakt@lalifes.studio</a>
     </div>
   </footer>
 
