@@ -440,7 +440,7 @@
   <footer class="container animate-in delay-3">
     <div>&copy; 2026 La'Lifes Studios. All rights reserved.</div>
     <div>
-      <a href="mailto:kontakt@lalifes.studio">kontakt@lalifes.studio</a>
+      <a href="mailto:pweisenbilder20112@gmail.com">kontakt@lalifes.studio</a>
     </div>
   </footer>
 
