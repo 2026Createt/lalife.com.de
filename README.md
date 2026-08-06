@@ -1,4 +1,4 @@
-
+<!doctype html>
 <html lang="de">
 <head>
   <meta charset="utf-8" />
@@ -7,24 +7,22 @@
   <meta name="description" content="Fortschrittliche und performante FiveM Scripts für authentisches Roleplay." />
 
   <style>
-    /* Professionelles, technisches Dark-Theme (Industrial / Clean) */
+    /* Premium Tech-Startup Theme */
     :root {
-      --bg: #0d1117;
-      --surface: #161b22;
-      --border: #30363d;
-      --border-hover: #8b949e;
+      --bg: #090a0f;
+      --surface: rgba(22, 27, 34, 0.4);
+      --border: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(47, 129, 247, 0.4);
       --accent: #2f81f7;
-      --accent-hover: #1f6feb;
-      --text-main: #e6edf3;
+      --accent-glow: rgba(47, 129, 247, 0.15);
+      --text-main: #f0f6fc;
       --text-muted: #8b949e;
-      --radius: 6px;
-      --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-      --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, Menlo, Monaco, monospace;
+      --radius: 12px;
+      --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+      --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
     }
 
-    * { 
-      box-sizing: border-box; 
-    }
+    * { box-sizing: border-box; }
     
     body {
       margin: 0;
@@ -32,14 +30,54 @@
       background-color: var(--bg);
       color: var(--text-main);
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
       line-height: 1.6;
-      padding: 3rem 2rem;
+      padding: 4rem 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 4rem;
+      gap: 5rem;
+      position: relative;
+      overflow-x: hidden;
     }
+
+    /* Das gewisse Extra: Feines Hintergrund-Raster (Blueprint Vibe) */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 32px 32px;
+      mask-image: radial-gradient(ellipse 80% 50% at 50% 0%, black 40%, transparent 100%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 50% at 50% 0%, black 40%, transparent 100%);
+      z-index: -2;
+    }
+
+    /* Subtiler Glow im Hintergrund oben Mitte */
+    body::after {
+      content: "";
+      position: absolute;
+      top: -150px; left: 50%;
+      transform: translateX(-50%);
+      width: 600px; height: 400px;
+      background: radial-gradient(circle, rgba(47,129,247,0.15) 0%, transparent 70%);
+      z-index: -1;
+      filter: blur(40px);
+    }
+
+    /* Fade-In Animation für die Elemente */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-in {
+      animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      opacity: 0;
+    }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
 
     /* Container */
     .container {
@@ -47,13 +85,13 @@
       max-width: 1000px;
     }
 
-    /* Header / Hero */
+    /* Hero Section */
     .hero {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 3rem;
+      align-items: center;
+      text-align: center;
     }
     
     .logo-badge {
@@ -63,41 +101,46 @@
       font-size: 0.85rem;
       color: var(--accent);
       background: rgba(47, 129, 247, 0.1);
-      padding: 0.4rem 0.8rem;
-      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      border-radius: 64px;
       border: 1px solid rgba(47, 129, 247, 0.2);
-      width: fit-content;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 1px;
+      box-shadow: 0 0 20px rgba(47,129,247,0.1);
     }
 
     .hero h1 {
       margin: 0;
-      font-size: 2.5rem;
-      font-weight: 600;
-      letter-spacing: -0.5px;
+      font-size: 3.5rem;
+      font-weight: 700;
+      letter-spacing: -1px;
+      line-height: 1.1;
+      /* Edler Text-Gradient */
+      background: linear-gradient(180deg, #ffffff 0%, #a2b0c1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .hero p {
-      margin: 0;
+      margin: 0 auto;
       color: var(--text-muted);
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       max-width: 600px;
     }
 
     .hero-actions {
       display: flex;
       gap: 1rem;
-      margin-top: 1rem;
+      margin-top: 1.5rem;
     }
 
     .btn {
-      padding: 0.75rem 1.25rem;
-      border-radius: var(--radius);
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
       font-weight: 500;
       text-decoration: none;
       font-size: 0.95rem;
-      transition: all 0.2s ease;
+      transition: all 0.3s ease;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
@@ -107,63 +150,63 @@
     .btn-primary {
       background-color: var(--accent);
       color: #ffffff;
-      border: 1px solid var(--accent);
+      box-shadow: 0 4px 14px 0 rgba(47, 129, 247, 0.39);
     }
 
     .btn-primary:hover {
-      background-color: var(--accent-hover);
-      border-color: var(--accent-hover);
+      background-color: #1f6feb;
+      box-shadow: 0 6px 20px rgba(47, 129, 247, 0.23);
+      transform: translateY(-2px);
     }
 
     .btn-secondary {
-      background-color: transparent;
+      background-color: rgba(255,255,255,0.03);
       color: var(--text-main);
       border: 1px solid var(--border);
+      backdrop-filter: blur(10px);
     }
 
     .btn-secondary:hover {
-      border-color: var(--border-hover);
-      background-color: var(--surface);
+      background-color: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.2);
+      transform: translateY(-2px);
     }
 
-    /* Info Section */
+    /* About Section */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 2fr;
-      gap: 2rem;
-      background: var(--surface);
+      gap: 3rem;
+      background: linear-gradient(145deg, var(--surface), rgba(13, 17, 23, 0.2));
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 2rem;
+      padding: 2.5rem;
+      backdrop-filter: blur(12px);
     }
 
     .about-title h2 {
       margin: 0;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: 500;
+      color: var(--text-main);
     }
 
     .about-content p {
-      margin: 0 0 1rem 0;
+      margin: 0 0 1.2rem 0;
       color: var(--text-muted);
     }
-    
-    .about-content p:last-child {
-      margin-bottom: 0;
-    }
+    .about-content p:last-child { margin-bottom: 0; }
 
-    /* Projects */
+    /* Projects Section */
     .section-header {
-      margin-bottom: 2rem;
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
+      margin-bottom: 2.5rem;
     }
 
     .section-header h2 {
       margin: 0;
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       font-weight: 600;
+      letter-spacing: -0.5px;
     }
 
     .grid {
@@ -172,20 +215,43 @@
       gap: 1.5rem;
     }
 
+    /* Interaktive Cards */
     .card {
-      background: var(--bg);
+      background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 1.5rem;
+      padding: 1.8rem;
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      transition: border-color 0.2s ease;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                  border-color 0.3s ease, 
+                  box-shadow 0.4s ease;
     }
 
     .card:hover {
+      transform: translateY(-6px);
       border-color: var(--border-hover);
+      box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5), 0 0 20px var(--accent-glow);
     }
+
+    /* Subtiler Glow-Punkt in der Karte beim Hover */
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 0%), rgba(47, 129, 247, 0.06), transparent 40%);
+      z-index: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+    .card:hover::before { opacity: 1; }
+
+    .card > * { position: relative; z-index: 1; }
 
     .card-header {
       display: flex;
@@ -195,8 +261,8 @@
 
     .card-title {
       margin: 0;
-      font-size: 1.1rem;
-      font-weight: 500;
+      font-size: 1.15rem;
+      font-weight: 600;
       color: var(--text-main);
     }
 
@@ -204,15 +270,24 @@
       font-family: var(--font-mono);
       font-size: 0.75rem;
       color: var(--accent);
-      margin-top: 0.25rem;
+      margin-top: 0.4rem;
+      letter-spacing: 0.5px;
     }
 
+    /* Pulsierender Live-Indikator */
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(47, 129, 247, 0.4); }
+      70% { box-shadow: 0 0 0 6px rgba(47, 129, 247, 0); }
+      100% { box-shadow: 0 0 0 0 transparent; }
+    }
+    
     .status-dot {
       width: 8px;
       height: 8px;
       background-color: var(--accent);
       border-radius: 50%;
       display: inline-block;
+      animation: pulse 2s infinite;
     }
 
     .card p {
@@ -220,6 +295,7 @@
       color: var(--text-muted);
       font-size: 0.95rem;
       flex-grow: 1;
+      line-height: 1.6;
     }
 
     /* Footer */
@@ -232,6 +308,7 @@
       color: var(--text-muted);
       font-size: 0.9rem;
       width: 100%;
+      margin-top: 2rem;
     }
 
     footer a {
@@ -239,25 +316,23 @@
       text-decoration: none;
       transition: color 0.2s;
     }
-
-    footer a:hover {
-      color: var(--accent);
-    }
+    footer a:hover { color: var(--accent); }
 
     /* Responsive */
     @media (max-width: 768px) {
-      body { padding: 2rem 1.5rem; gap: 3rem; }
-      .about-grid { grid-template-columns: 1fr; gap: 1rem; }
-      .hero h1 { font-size: 2rem; }
-      .hero-actions { flex-direction: column; }
+      body { padding: 2rem 1.5rem; gap: 4rem; }
+      .about-grid { grid-template-columns: 1fr; gap: 1.5rem; padding: 1.5rem; }
+      .hero h1 { font-size: 2.2rem; }
+      .hero-actions { flex-direction: column; width: 100%; }
+      .btn { width: 100%; }
     }
   </style>
 </head>
 <body>
 
-  <header class="container hero">
+  <header class="container hero animate-in">
     <div class="logo-badge">Est. 2026 // La'Lifes Studios</div>
-    <h1>Premium FiveM Development.</h1>
+    <h1>Premium FiveM<br>Development.</h1>
     <p>Performante, sichere und auf Realismus ausgelegte Scripts. Skalierbare Infrastruktur für ambitionierte Roleplay-Projekte.</p>
     
     <div class="hero-actions">
@@ -266,7 +341,7 @@
     </div>
   </header>
 
-  <section class="container">
+  <section class="container animate-in delay-1">
     <div class="about-grid">
       <div class="about-title">
         <h2>System-Architektur & <br>UI-Design</h2>
@@ -282,7 +357,7 @@
     </div>
   </section>
 
-  <main class="container" id="projects">
+  <main class="container animate-in delay-2" id="projects">
     <div class="section-header">
       <h2>Ausgewählte Systeme</h2>
     </div>
@@ -362,7 +437,7 @@
     </div>
   </main>
 
-  <footer class="container">
+  <footer class="container animate-in delay-3">
     <div>&copy; 2026 La'Lifes Studios. All rights reserved.</div>
     <div>
       <a href="mailto:kontakt@lalifes.studio">kontakt@lalifes.studio</a>
