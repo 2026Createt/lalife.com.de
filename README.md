@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>La'Lifes Studios | Premium FiveM Development</title>
   <meta name="description" content="Fortschrittliche, performante und immersive FiveM Scripts für anspruchsvolle Roleplay-Server." />
+  
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="q9aucXo06qaGu6ts-PvlUEnvwP1NcldxJqcdHY231J0" />
 
   <style>
     /* ==========================================
