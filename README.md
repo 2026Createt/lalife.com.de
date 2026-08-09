@@ -1,4 +1,3 @@
-
 <html lang="de">
 <head>
   <meta charset="utf-8" />
@@ -363,7 +362,19 @@
     </div>
 
     <div class="grid">
-      <!-- Projekt 1 -->
+      <!-- Projekt 1: NEU - AXON BODYCAM & CAD -->
+      <article class="card">
+        <div class="card-header">
+          <div>
+            <h3 class="card-title">Axon Body 3 & CAD Dispatch</h3>
+            <div class="card-tech">NUI / CAD-UI / CCTV-SPECTATOR</div>
+          </div>
+          <span class="status-dot"></span>
+        </div>
+        <p>Fotorealistisches Axon Body 3 System mit interaktivem Hardware-Gehäuse, OLED-Display und physischem Event-Button. Inklusive robustem Leitstellen-Toughpad (Axon Respond CAD) für nahtlose Live-CCTV-Überwachung im Dispatch.</p>
+      </article>
+
+      <!-- Projekt 2 -->
       <article class="card">
         <div class="card-header">
           <div>
@@ -375,7 +386,7 @@
         <p>Ein modulares Anzeigen-System für staatliche und private Fraktionen. Berechtigungen und Inhalte werden vollständig serverseitig konfiguriert, unterstützt von einem cleanen User Interface.</p>
       </article>
 
-      <!-- Projekt 2 -->
+      <!-- Projekt 3 -->
       <article class="card">
         <div class="card-header">
           <div>
@@ -387,7 +398,7 @@
         <p>Immersives Schlüsselkasten-System zur Fahrzeugausgabe. Entwickelt für Hardcore-RP mit authentischem, industriellem Interaktions-Design statt simplen Menüs.</p>
       </article>
 
-      <!-- Projekt 3 -->
+      <!-- Projekt 4 -->
       <article class="card">
         <div class="card-header">
           <div>
@@ -399,7 +410,7 @@
         <p>Vollwertiges DJ-Interface mit xsound-Integration für dynamisches, positionsbasiertes 3D-Audio. Inklusive synchronisierter Nebel- und Lichteffektsteuerung für Event-Locations.</p>
       </article>
 
-      <!-- Projekt 4 -->
+      <!-- Projekt 5 -->
       <article class="card">
         <div class="card-header">
           <div>
@@ -411,7 +422,7 @@
         <p>Leitstand-Simulation und Job-Logik für den ÖPNV. Umfassende Fahrplan-Verwaltung, dynamische Wegpunkte und ein realistisch nachempfundenes Bedienfeld für den Fahrer.</p>
       </article>
 
-      <!-- Projekt 5 -->
+      <!-- Projekt 6 -->
       <article class="card">
         <div class="card-header">
           <div>
@@ -423,7 +434,7 @@
         <p>Hochflexibles Aufzug-System für mehrstöckige Gebäude. Etagen, Berechtigungen (Job/Item) und Koordinaten frei justierbar. Bedient über ein physisch wirkendes Tastenfeld.</p>
       </article>
 
-      <!-- Projekt 6 -->
+      <!-- Projekt 7 -->
       <article class="card">
         <div class="card-header">
           <div>
