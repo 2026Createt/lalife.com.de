@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="utf-8" />
@@ -425,6 +425,8 @@
       backdrop-filter: blur(10px);
       transition: all 0.3s ease;
       min-height: 180px;
+      text-decoration: none;
+      color: var(--text-main);
     }
 
     .partner-card:hover {
@@ -654,18 +656,21 @@
     </div>
 
     <div class="partners-grid">
-      <div class="partner-card">
-        <span class="partner-badge">Partner Slot #01</span>
-        <h3 data-i18n="partner_free">Platz frei</h3>
-        <p data-i18n="partner_p1">Ausgewählte Server-Projekte oder Creator im La'Lifes Netzwerk.</p>
-      </div>
+      <!-- Partner Slot #01: HOHENWALD ROLEPLAY -->
+      <a href="https://discord.gg/VgHFdNEqu3" target="_blank" rel="noopener noreferrer" class="partner-card">
+        <span class="partner-badge" data-i18n="partner1_badge">Offizieller Beta-Server</span>
+        <h3>HohenWald Roleplay</h3>
+        <p data-i18n="partner_p1">Ein enger Partner im La'Lifes-Entwicklungsnetzwerk. Ausgewählte neue Scripts und Systeme werden hier exklusiv im Live-Betrieb als Beta getestet.</p>
+      </a>
 
+      <!-- Partner Slot #02 -->
       <div class="partner-card">
         <span class="partner-badge">Partner Slot #02</span>
         <h3 data-i18n="partner_free">Platz frei</h3>
         <p data-i18n="partner_p2">Interesse an einer Partnerschaft? Eröffne ein Ticket auf Discord.</p>
       </div>
 
+      <!-- Partner Slot #03 -->
       <div class="partner-card">
         <span class="partner-badge">Partner Slot #03</span>
         <h3 data-i18n="partner_free">Platz frei</h3>
@@ -676,7 +681,7 @@
 
   <!-- FOOTER -->
   <footer class="container animate-in delay-3">
-    <div>&copy; 2026 La'Lifes Studios. <span data-i18n="footer_rights">All rights reserved.</span></div>
+    <div>&copy; 2026 La'Lifes Studios. <span data-i18n="footer_rights">Alle Rechte vorbehalten.</span></div>
     <div>
       <a href="https://discord.gg/hHCtR4T8wN" target="_blank" rel="noopener noreferrer">Discord Community</a>
     </div>
@@ -711,8 +716,9 @@
         p7_desc: "Komplexes Wartungssystem für Elektriker. Bietet dedizierte Schaltkästen im Industrial-Look, bei denen Spieler realistische Fehlerbehebungen und Reparaturmechaniken durchführen müssen.",
         partners_title: "Partner & Netzwerk",
         partners_sub: "Zusammenarbeit & Server-Netzwerk",
+        partner1_badge: "Offizieller Beta-Server",
+        partner_p1: "Ein enger Partner im La'Lifes-Entwicklungsnetzwerk. Ausgewählte neue Scripts und Systeme werden hier exklusiv im Live-Betrieb als Beta getestet.",
         partner_free: "Platz frei",
-        partner_p1: "Ausgewählte Server-Projekte oder Creator im La'Lifes Netzwerk.",
         partner_p2: "Interesse an einer Partnerschaft? Eröffne ein Ticket auf Discord.",
         partner_p3: "Raum für gemeinsame FiveM-Infrastruktur und Development-Kooperationen.",
         footer_rights: "Alle Rechte vorbehalten."
@@ -741,8 +747,9 @@
         p7_desc: "Complex maintenance system for electricians. Features dedicated switchboxes in an industrial style where players must perform realistic troubleshooting and repairs.",
         partners_title: "Partners & Network",
         partners_sub: "Collaborations & Server Network",
+        partner1_badge: "Official Beta Server",
+        partner_p1: "A close partner in the La'Lifes development network. Selected new scripts and systems are exclusively beta-tested here in a live production environment.",
         partner_free: "Open Slot",
-        partner_p1: "Selected server projects or creators within the La'Lifes network.",
         partner_p2: "Interested in a partnership? Open a ticket on our Discord.",
         partner_p3: "Space for shared FiveM infrastructure and development collaborations.",
         footer_rights: "All rights reserved."
