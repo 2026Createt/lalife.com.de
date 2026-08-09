@@ -297,6 +297,62 @@
       line-height: 1.6;
     }
 
+    /* Partner Section (NEU) */
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .partner-card {
+      background: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 0.8rem;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      min-height: 180px;
+    }
+
+    .partner-card:hover {
+      border-style: solid;
+      border-color: var(--border-hover);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px -8px rgba(0,0,0,0.4);
+    }
+
+    .partner-badge {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.04);
+      padding: 0.35rem 0.8rem;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .partner-card h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--text-main);
+    }
+
+    .partner-card p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      max-width: 250px;
+    }
+
     /* Footer */
     footer {
       border-top: 1px solid var(--border);
@@ -447,6 +503,33 @@
       </article>
     </div>
   </main>
+
+  <!-- PARTNER / NETWORK SECTION (NEU) -->
+  <section class="container animate-in delay-3" id="partners">
+    <div class="section-header">
+      <h2>Partner & Netzwerk</h2>
+    </div>
+
+    <div class="partners-grid">
+      <div class="partner-card">
+        <span class="partner-badge">Partner Slot #01</span>
+        <h3>Platz frei</h3>
+        <p>Ausgewählte Server-Projekte oder Creator im La'Lifes Netzwerk.</p>
+      </div>
+
+      <div class="partner-card">
+        <span class="partner-badge">Partner Slot #02</span>
+        <h3>Platz frei</h3>
+        <p>Interesse an einer Partnerschaft? Kontaktiere uns gerne direkt.</p>
+      </div>
+
+      <div class="partner-card">
+        <span class="partner-badge">Partner Slot #03</span>
+        <h3>Platz frei</h3>
+        <p>Raum für gemeinsame FiveM-Infrastruktur und Development-Kooperationen.</p>
+      </div>
+    </div>
+  </section>
 
   <footer class="container animate-in delay-3">
     <div>&copy; 2026 La'Lifes Studios. All rights reserved.</div>
