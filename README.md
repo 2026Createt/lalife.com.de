@@ -5,13 +5,16 @@
   <title>La'Lifes Studios | Premium FiveM Development</title>
   <meta name="description" content="Fortschrittliche, performante und immersive FiveM Scripts für anspruchsvolle Roleplay-Server." />
   
+  <!-- FontAwesome für HUD Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <!-- Google Site Verification -->
   <meta name="google-site-verification" content="q9aucXo06qaGu6ts-PvlUEnvwP1NcldxJqcdHY231J0" />
 
   <style>
     /* ==========================================
-       1. THEME & VARIABLES (Premium Tech-Startup)
-       ========================================== */
+        1. THEME & VARIABLES (Premium Tech-Startup)
+        ========================================== */
     :root {
       --bg: #090a0f;
       --surface: rgba(22, 27, 34, 0.45);
@@ -84,8 +87,8 @@
     }
 
     /* ==========================================
-       2. NAVIGATION
-       ========================================== */
+        2. NAVIGATION
+        ========================================== */
     .navbar {
       position: fixed;
       top: 0; left: 0;
@@ -171,8 +174,8 @@
     }
 
     /* ==========================================
-       3. BUTTONS & UI-ELEMENTE
-       ========================================== */
+        3. BUTTONS & UI-ELEMENTE
+        ========================================== */
     .btn {
       padding: 0.8rem 1.5rem;
       border-radius: 8px;
@@ -238,8 +241,8 @@
     .delay-3 { animation-delay: 0.3s; }
 
     /* ==========================================
-       4. HERO SECTION
-       ========================================== */
+        4. HERO SECTION
+        ========================================== */
     .hero {
       display: flex;
       flex-direction: column;
@@ -287,8 +290,8 @@
     }
 
     /* ==========================================
-       5. ABOUT / ARCHITEKTUR SECTION
-       ========================================== */
+        5. ABOUT / ARCHITEKTUR SECTION
+        ========================================== */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 2fr;
@@ -314,8 +317,8 @@
     .about-content p:last-child { margin-bottom: 0; }
 
     /* ==========================================
-       6. PROJECTS SECTION
-       ========================================== */
+        6. PROJECTS SECTION
+        ========================================== */
     .section-header {
       margin-bottom: 2.5rem;
       display: flex;
@@ -405,8 +408,8 @@
     }
 
     /* ==========================================
-       7. PARTNER & NETWORK SECTION
-       ========================================== */
+        7. PARTNER & NETWORK SECTION
+        ========================================== */
     .partners-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -463,8 +466,254 @@
     }
 
     /* ==========================================
-       8. FOOTER
-       ========================================== */
+        8. FIVEM ULTIMATE HUD STYLES (EINGEFÜGT)
+        ========================================== */
+    /* OBEN RECHTS (Bereits im Seiten-Design integriert via .top-right) */
+    .top-right {
+      position: fixed;
+      top: 85px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+      z-index: 999;
+    }
+
+    .hud-pill {
+      background: rgba(15, 15, 18, 0.78);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 6px;
+      padding: 6px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      color: #fff;
+    }
+
+    .hud-pill .icon {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .hud-text-box {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hud-label {
+      font-size: 9px;
+      letter-spacing: 0.8px;
+      color: rgba(255, 255, 255, 0.4);
+      font-weight: 700;
+    }
+
+    .hud-value {
+      font-size: 13px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    /* WAFFEN-MODUL */
+    .weapon-container {
+      position: fixed;
+      top: 135px;
+      right: 20px;
+      z-index: 999;
+    }
+    .weapon-pill {
+      border-left: 3px solid #f59e0b;
+    }
+    .firemode-badge {
+      background: rgba(245, 158, 11, 0.2);
+      color: #f59e0b;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 3px 6px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    /* UNTEN LINKS: Status-Reihe */
+    .bottom-left {
+      position: fixed;
+      bottom: 25px;
+      left: 25px; 
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 999;
+    }
+
+    .status-circle {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(15, 15, 18, 0.78);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .voice-tooltip {
+      position: absolute;
+      top: -25px;
+      background: rgba(15, 15, 18, 0.9);
+      color: #fff;
+      font-size: 9px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+      white-space: nowrap;
+    }
+    .status-circle:hover .voice-tooltip { opacity: 1; }
+
+    .status-circle.voice-whisper { color: #10b981; border-color: rgba(16, 185, 129, 0.5); }
+    .status-circle.voice-normal { color: #3b82f6; border-color: rgba(59, 130, 246, 0.5); }
+    .status-circle.voice-shout { color: #ef4444; border-color: rgba(239, 68, 68, 0.6); }
+
+    .status-pill {
+      background: rgba(15, 15, 18, 0.78);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 6px 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      color: #fff;
+    }
+    .status-pill i { font-size: 12px; }
+
+    .bar-bg {
+      width: 45px;
+      height: 5px;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .bar {
+      height: 100%;
+      width: 100%;
+      border-radius: 10px;
+      transition: width 0.3s ease;
+    }
+
+    .health i { color: #ff4a4a; }
+    .health .bar { background: #ff4a4a; }
+    .pulse i { color: #ec4899; }
+    
+    @keyframes heartBeat {
+      0% { transform: scale(1); }
+      15% { transform: scale(1.25); }
+      30% { transform: scale(1); }
+      45% { transform: scale(1.15); }
+      60% { transform: scale(1); }
+    }
+    .pulse-anim { animation: heartBeat 0.8s infinite ease-in-out; }
+
+    .armor i { color: #3b82f6; }
+    .armor .bar { background: #3b82f6; }
+    .hunger i { color: #f59e0b; }
+    .hunger .bar { background: #f59e0b; }
+    .thirst i { color: #06b6d4; }
+    .thirst .bar { background: #06b6d4; }
+
+    /* UNTEN RECHTS: Supercar Digital-Tacho */
+    .speedo-container {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+      z-index: 999;
+    }
+
+    .street-capsule {
+      background: rgba(15, 15, 18, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 5px 12px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      color: #fff;
+    }
+    .street-capsule .compass {
+      background: rgba(59, 130, 246, 0.2);
+      color: #60a5fa;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 4px;
+      letter-spacing: 1px;
+    }
+    .street-capsule .street { color: rgba(255,255,255,0.85); font-weight: 600; }
+
+    .speedo-main {
+      background: rgba(15, 15, 18, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-left: 4px solid #3b82f6;
+      padding: 10px 18px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+    }
+
+    .gear-display {
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      width: 32px; height: 32px;
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    #gear-val { font-size: 16px; font-weight: 800; color: #60a5fa; }
+
+    .speed-display { display: flex; align-items: baseline; gap: 6px; }
+    #speed-val { font-size: 34px; font-weight: 800; color: #ffffff; letter-spacing: -1px; }
+    .kmh { font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.4); letter-spacing: 1px; }
+
+    .vehicle-indicators { display: flex; gap: 10px; align-items: center; }
+    .ind-icon { font-size: 13px; color: rgba(255, 255, 255, 0.2); }
+    .ind-icon.active-green { color: #2ecc71; text-shadow: 0 0 8px rgba(46, 204, 113, 0.6); }
+    .ind-icon.active-red { color: #ff4747; text-shadow: 0 0 8px rgba(255, 71, 71, 0.6); }
+
+    @keyframes pulseWarning {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.15); opacity: 1; text-shadow: 0 0 12px rgba(255, 71, 71, 0.9); }
+      100% { transform: scale(1); opacity: 0.8; }
+    }
+    .warning-pulse { color: #ff4747 !important; animation: pulseWarning 1s infinite ease-in-out; }
+
+    .rpm-container { width: 100%; height: 4px; background: rgba(255, 255, 255, 0.1); border-radius: 2px; overflow: hidden; }
+    .rpm-fill { height: 100%; width: 45%; background: #3b82f6; }
+
+    .speedo-bars { display: flex; gap: 8px; width: 100%; }
+    .v-bar {
+      flex: 1; background: rgba(15, 15, 18, 0.85); border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 5px 10px; border-radius: 6px; display: flex; align-items: center; gap: 8px; color: #fff;
+    }
+    .v-bar i { font-size: 11px; }
+    .v-bar .bar-bg { width: 100%; height: 4px; }
+    .fuel i { color: #10b981; } .fuel .bar { background: #10b981; }
+    .engine i { color: #f97316; } .engine .bar { background: #f97316; }
+
+    .hidden { display: none !important; }
+
+    /* ==========================================
+        9. FOOTER
+        ========================================== */
     footer {
       border-top: 1px solid var(--border);
       padding-top: 2rem;
@@ -496,6 +745,127 @@
   </style>
 </head>
 <body>
+
+  <!-- ==========================================
+       FIVEM HUD OVERLAY (DEMO-SICHTBAR AUF WEBSEITE)
+       ========================================== -->
+
+  <!-- OBEN RECHTS: Slots (Beruf, Geld, ID) -->
+  <div class="top-right">
+      <div class="hud-pill">
+          <i class="fa-solid fa-briefcase icon"></i>
+          <div class="hud-text-box">
+              <span class="hud-label">BERUF</span>
+              <span id="job-value" class="hud-value">Lead Dev - Admin</span>
+          </div>
+      </div>
+      <div class="hud-pill">
+          <i class="fa-solid fa-wallet icon"></i>
+          <div class="hud-text-box">
+              <span class="hud-label">BARGELD</span>
+              <span id="money-value" class="hud-value">$24,500</span>
+          </div>
+      </div>
+      <div class="hud-pill">
+          <i class="fa-solid fa-id-card icon"></i>
+          <div class="hud-text-box">
+              <span class="hud-label">ID</span>
+              <span id="id-value" class="hud-value">1</span>
+          </div>
+      </div>
+  </div>
+
+  <!-- WAFFEN-MODUL -->
+  <div id="weapon-module" class="weapon-container">
+      <div class="hud-pill weapon-pill">
+          <i class="fa-solid fa-gun icon"></i>
+          <div class="hud-text-box">
+              <span id="weapon-name" class="hud-label">GEWEHR</span>
+              <span id="ammo-value" class="hud-value">30 / 120</span>
+          </div>
+          <div class="firemode-badge" id="firemode-val">AUTO</div>
+      </div>
+  </div>
+
+  <!-- UNTEN LINKS: Status-Reihe, Voice & Puls -->
+  <div class="bottom-left">
+      <div id="voice-indicator" class="status-circle voice-normal">
+          <i id="mic-icon" class="fa-solid fa-microphone"></i>
+          <span id="voice-range-label" class="voice-tooltip">Normal</span>
+      </div>
+
+      <div class="status-pill health">
+          <i class="fa-solid fa-heart"></i>
+          <div class="bar-bg"><div id="health-bar" class="bar" style="width: 100%;"></div></div>
+      </div>
+
+      <div class="status-pill pulse">
+          <i class="fa-solid fa-heart-pulse id-pulse-icon pulse-anim"></i>
+          <div class="hud-text-box">
+              <span class="hud-label">PULS</span>
+              <span id="bpm-value" class="hud-value">72 BPM</span>
+          </div>
+      </div>
+
+      <div id="armor-pill" class="status-pill armor">
+          <i class="fa-solid fa-shield-halved"></i>
+          <div class="bar-bg"><div id="armor-bar" class="bar" style="width: 80%;"></div></div>
+      </div>
+
+      <div class="status-pill hunger">
+          <i class="fa-solid fa-burger"></i>
+          <div class="bar-bg"><div id="hunger-bar" class="bar" style="width: 90%;"></div></div>
+      </div>
+
+      <div class="status-pill thirst">
+          <i class="fa-solid fa-droplet"></i>
+          <div class="bar-bg"><div id="thirst-bar" class="bar" style="width: 85%;"></div></div>
+      </div>
+  </div>
+
+  <!-- UNTEN RECHTS: Supercar Digital-Tacho (Demo aktiv) -->
+  <div id="speedometer" class="speedo-container">
+      <div class="street-capsule">
+          <span id="compass-val" class="compass">N</span>
+          <span id="street-val" class="street">Vinewood Boulevard</span>
+      </div>
+
+      <div class="speedo-main" id="speedo-main-box">
+          <div class="gear-display">
+              <span id="gear-val">3</span>
+          </div>
+          <div class="speed-display">
+              <span id="speed-val">145</span>
+              <span class="kmh">KM/H</span>
+          </div>
+
+          <div class="vehicle-indicators">
+              <i id="blinker-left" class="fa-solid fa-arrow-left ind-icon"></i>
+              <i id="seatbelt-icon" class="fa-solid fa-user-shield ind-icon active-green"></i>
+              <i id="engine-icon" class="fa-solid fa-wrench ind-icon"></i>
+              <i id="blinker-right" class="fa-solid fa-arrow-right ind-icon active-green"></i>
+          </div>
+      </div>
+
+      <div class="rpm-container">
+          <div id="rpm-bar" class="rpm-fill" style="width: 65%;"></div>
+      </div>
+
+      <div class="speedo-bars">
+          <div class="v-bar fuel">
+              <i class="fa-solid fa-gas-pump"></i>
+              <div class="bar-bg"><div id="fuel-bar" class="bar" style="width: 75%;"></div></div>
+          </div>
+          <div class="v-bar engine">
+              <i class="fa-solid fa-car-burst"></i>
+              <div class="bar-bg"><div id="engine-bar" class="bar" style="width: 95%;"></div></div>
+          </div>
+      </div>
+  </div>
+
+  <!-- ==========================================
+       ORIGINALE WEBSITE INHALTE
+       ========================================== -->
 
   <!-- NACH OBEN FIXIERTE NAVIGATION -->
   <nav class="navbar">
@@ -658,14 +1028,14 @@
     </div>
 
     <div class="partners-grid">
-      <!-- Partner Slot #01: HOHENWALD ROLEPLAY -->
+      <!-- Partner Slot #01 -->
       <a href="https://discord.gg/VgHFdNEqu3" target="_blank" rel="noopener noreferrer" class="partner-card">
         <span class="partner-badge" data-i18n="partner1_badge">Offizieller Beta-Server</span>
         <h3>HohenWald Roleplay</h3>
         <p data-i18n="partner_p1">Ein enger Partner im La'Lifes-Entwicklungsnetzwerk. Ausgewählte neue Scripts und Systeme werden hier exklusiv im Live-Betrieb als Beta getestet.</p>
       </a>
 
-      <!-- Partner Slot #02: SOUTH SIDE LOS ANGELES -->
+      <!-- Partner Slot #02 -->
       <a href="https://discord.gg/ssla" target="_blank" rel="noopener noreferrer" class="partner-card">
         <span class="partner-badge" data-i18n="partner2_badge">Partner Server</span>
         <h3>South Side Los Angeles</h3>
@@ -690,7 +1060,7 @@
   </footer>
 
   <!-- ==========================================
-       9. AUTOMATISCHE SPRACHERKENNUNG (I18N)
+       AUTOMATISCHE SPRACHERKENNUNG (I18N)
        ========================================== -->
   <script>
     const translations = {
@@ -762,7 +1132,6 @@
 
     let currentLang = 'de';
 
-    // Automatische Spracherkennung des Browsers
     function detectLanguage() {
       const userLang = navigator.language || navigator.userLanguage || 'de';
       if (!userLang.toLowerCase().startsWith('de')) {
@@ -787,13 +1156,11 @@
       });
     }
 
-    // Toggle-Button Handler
     document.getElementById('langToggle').addEventListener('click', () => {
       const nextLang = currentLang === 'de' ? 'en' : 'de';
       applyLanguage(nextLang);
     });
 
-    // Sprache beim Laden automatisch einstellen
     window.addEventListener('DOMContentLoaded', detectLanguage);
   </script>
 </body>
