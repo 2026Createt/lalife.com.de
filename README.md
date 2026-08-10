@@ -1,4 +1,3 @@
-
 <html lang="de">
 <head>
   <meta charset="utf-8" />
@@ -666,12 +665,12 @@
         <p data-i18n="partner_p1">Ein enger Partner im La'Lifes-Entwicklungsnetzwerk. Ausgewählte neue Scripts und Systeme werden hier exklusiv im Live-Betrieb als Beta getestet.</p>
       </a>
 
-      <!-- Partner Slot #02 -->
-      <div class="partner-card">
-        <span class="partner-badge">Partner Slot #02</span>
-        <h3 data-i18n="partner_free">Platz frei</h3>
-        <p data-i18n="partner_p2">Interesse an einer Partnerschaft? Eröffne ein Ticket auf Discord.</p>
-      </div>
+      <!-- Partner Slot #02: SOUTH SIDE LOS ANGELES -->
+      <a href="https://discord.gg/ssla" target="_blank" rel="noopener noreferrer" class="partner-card">
+        <span class="partner-badge" data-i18n="partner2_badge">Partner Server</span>
+        <h3>South Side Los Angeles</h3>
+        <p data-i18n="partner_p2">Offizieller Partner von La'Lifes Studios. Das Projekt setzt im Live-Betrieb auf ausgewählte, performante Scripts aus unserer Entwicklung.</p>
+      </a>
 
       <!-- Partner Slot #03 -->
       <div class="partner-card">
@@ -721,8 +720,9 @@
         partners_sub: "Zusammenarbeit & Server-Netzwerk",
         partner1_badge: "Offizieller Beta-Server",
         partner_p1: "Ein enger Partner im La'Lifes-Entwicklungsnetzwerk. Ausgewählte neue Scripts und Systeme werden hier exklusiv im Live-Betrieb als Beta getestet.",
+        partner2_badge: "Partner Server",
+        partner_p2: "Offizieller Partner von La'Lifes Studios. Das Projekt setzt im Live-Betrieb auf ausgewählte, performante Scripts aus unserer Entwicklung.",
         partner_free: "Platz frei",
-        partner_p2: "Interesse an einer Partnerschaft? Eröffne ein Ticket auf Discord.",
         partner_p3: "Raum für gemeinsame FiveM-Infrastruktur und Development-Kooperationen.",
         footer_rights: "Alle Rechte vorbehalten."
       },
@@ -752,8 +752,9 @@
         partners_sub: "Collaborations & Server Network",
         partner1_badge: "Official Beta Server",
         partner_p1: "A close partner in the La'Lifes development network. Selected new scripts and systems are exclusively beta-tested here in a live production environment.",
+        partner2_badge: "Partner Server",
+        partner_p2: "Official partner of La'Lifes Studios. This project utilizes selected, high-performance scripts from our development in their live environment.",
         partner_free: "Open Slot",
-        partner_p2: "Interested in a partnership? Open a ticket on our Discord.",
         partner_p3: "Space for shared FiveM infrastructure and development collaborations.",
         footer_rights: "All rights reserved."
       }
