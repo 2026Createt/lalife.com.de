@@ -657,6 +657,18 @@
         </div>
         <p data-i18n="p8_desc">High-End HUD und Tacho-System mit modernem Glas-Design. Inklusive dynamischer Puls-Überwachung, integriertem Waffen-Modul, PMA-Voice-Sprachreichweitenanzeige, Gängen, Drehzahl-Schaltblitz und integriertem Anschnall- sowie Blinkersystem.</p>
       </article>
+      
+      <!-- Projekt 9: BMA-System -->
+      <article class="card">
+        <div class="card-header">
+          <div>
+            <h3 class="card-title" data-i18n="p9_title">BMA-System (Brandmeldeanlage)</h3>
+            <div class="card-tech">ESX / QB / NUI / LOGIC</div>
+          </div>
+          <span class="status-dot"></span>
+        </div>
+        <p data-i18n="p9_desc">Ultra-realistisches Brandmeldesystem mit physischem 2-Stufen-Alarm (Scheibe einschlagen, Knopf drücken). Inklusive konfigurierbarem Admin-Panel und robustem Berufsfeuerwehr-MDT (Tablet) für Live-Einsätze.</p>
+      </article>
     </div>
   </main>
 
@@ -702,8 +714,8 @@
   </footer>
 
   <!-- ==========================================
-       AUTOMATISCHE SPRACHERKENNUNG (I18N)
-       ========================================== -->
+        AUTOMATISCHE SPRACHERKENNUNG (I18N)
+        ========================================== -->
   <script>
     const translations = {
       de: {
@@ -730,6 +742,8 @@
         p7_desc: "Komplexes Wartungssystem für Elektriker. Bietet dedizierte Schaltkästen im Industrial-Look, bei denen Spieler realistische Fehlerbehebungen und Reparaturmechaniken durchführen müssen.",
         p8_title: "Ultimate Glassmorphism HUD",
         p8_desc: "High-End HUD und Tacho-System mit modernem Glas-Design. Inklusive dynamischer Puls-Überwachung, integriertem Waffen-Modul, PMA-Voice-Sprachreichweitenanzeige, Gängen, Drehzahl-Schaltblitz und integriertem Anschnall- sowie Blinkersystem.",
+        p9_title: "BMA-System (Brandmeldeanlage)",
+        p9_desc: "Ultra-realistisches Brandmeldesystem mit physischem 2-Stufen-Alarm (Scheibe einschlagen, Knopf drücken). Inklusive konfigurierbarem Admin-Panel und robustem Berufsfeuerwehr-MDT (Tablet) für Live-Einsätze.",
         partners_title: "Partner & Netzwerk",
         partners_sub: "Zusammenarbeit & Server-Netzwerk",
         partner1_badge: "Offizieller Beta-Server",
@@ -764,6 +778,8 @@
         p7_desc: "Complex maintenance system for electricians. Features dedicated switchboxes in an industrial style where players must perform realistic troubleshooting and repairs.",
         p8_title: "Ultimate Glassmorphism HUD",
         p8_desc: "High-end HUD and speedometer system featuring a modern glass design. Includes dynamic pulse tracking, an integrated weapon module, PMA-Voice range indicator, gears, RPM shift light, and built-in seatbelt and blinker systems.",
+        p9_title: "BMA Fire Alarm System",
+        p9_desc: "Ultra-realistic fire alarm system featuring a physical 2-step activation (break glass, push button). Includes a configurable admin panel and a rugged firefighter MDT (tablet) for live dispatching.",
         partners_title: "Partners & Network",
         partners_sub: "Collaborations & Server Network",
         partner1_badge: "Official Beta Server",
