@@ -274,7 +274,7 @@
     <!-- HERO SECTION -->
     <header class="hero">
       <h1>La'Lifes<br><span>Studios.</span></h1>
-      <p>Kein Bullshit. Keine leeren Versprechen. Einfach nur FiveM-Systeme, die aus der Masse herausstechen und funktionieren.</p>
+      <p>Dein wahrscheinlich erhlichster FiveM Scripte Shop</p>
     </header>
 
     <!-- ABOUT ME / DIE WAHRHEIT -->
